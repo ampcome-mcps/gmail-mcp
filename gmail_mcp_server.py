@@ -6,12 +6,7 @@ using FastMCP for simplified server setup.
 """
 
 import os
-import base64
 from typing import Any, Dict, List, Optional
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email.mime.base import MIMEBase
-from email import encoders
 
 from mcp.server.fastmcp import FastMCP
 from dotenv import load_dotenv
