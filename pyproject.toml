@@ -13,3 +13,5 @@ dependencies = [
     "pydantic>=2.11.7",
     "python-dotenv>=1.1.1",
 ]
+[project.scripts]
+gmail_mcp_server = "gmail_mcp_server:main"
