@@ -481,7 +481,7 @@ def gmail_send_message_with_attachment(
 def main():
     try:
         print("Starting Gmail MCP Server...")
-        mcp.run(transport="sse")
+        mcp.run(transport="stdio")
     except KeyboardInterrupt:
         print("Server stopped by user")
     except Exception as e:
