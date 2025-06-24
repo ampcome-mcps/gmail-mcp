@@ -12,21 +12,11 @@ load_dotenv()
 # Gmail API scope
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
-def get_variable(key: str) -> str:
-    """Get environment variable from .env file"""
-    # Convert the key format to environment variable format
-    env_key = key.replace('f/secrets/', '').replace('/', '_').upper()
-    value = os.getenv(env_key)
-    
-    if not value:
-        raise ValueError(f"Environment variable {env_key} not found. Please check your .env file.")
-    
-    return value
 
 def get_connection_credentials(id: str, providerConfigKey: str) -> Dict[str, Any]:
     """Get credentials from Nango"""
-    base_url = get_variable("f/secrets/nango/nango_base_url")
-    secret_key = get_variable("f/secrets/nango/nango_secret_key")
+    base_url = os.environ.get("NANGO_NANGO_BASE_URL")
+    secret_key = os.environ.get("NANGO_NANGO_SECRET_KEY")
     
     url = f"{base_url}/connection/{id}"
     params = {
