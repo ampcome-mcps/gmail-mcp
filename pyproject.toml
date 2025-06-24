@@ -14,4 +14,4 @@ dependencies = [
     "python-dotenv>=1.1.1",
 ]
 [project.scripts]
-gmail_mcp_server = "gmail_mcp_server:main"
+gmail-mcp = "gmail_mcp_server:main"

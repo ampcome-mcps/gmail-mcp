@@ -478,7 +478,7 @@ def gmail_send_message_with_attachment(
         return {"success": False, "error": f"Failed to send message with attachment: {str(e)}"}
 
 
-if __name__ == "__main__":
+def main():
     try:
         print("Starting Gmail MCP Server...")
         mcp.run(transport="sse")
