@@ -15,8 +15,8 @@ SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 def get_connection_credentials(id: str, providerConfigKey: str) -> Dict[str, Any]:
     """Get credentials from Nango"""
-    base_url = os.environ.get("NANGO_NANGO_BASE_URL")
-    secret_key = os.environ.get("NANGO_NANGO_SECRET_KEY")
+    base_url = os.environ.get("NANGO_BASE_URL")
+    secret_key = os.environ.get("NANGO_SECRET_KEY")
     
     url = f"{base_url}/connection/{id}"
     params = {
