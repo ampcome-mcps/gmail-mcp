@@ -31,11 +31,11 @@ def get_gmail_client() -> GmailClient:
     global _gmail_client, _gmail_service
     
     if _gmail_client is None:
-        connection_id = os.getenv('GMAIL_CONNECTION_ID')
-        provider_config_key = os.getenv('NANGO_PROVIDER_CONFIG_KEY', 'google')
+        connection_id = os.getenv('NANGO_CONNECTION_ID')
+        provider_config_key = os.getenv('NANGO_INTEGRATION_ID', 'google')
         
         if not connection_id:
-            raise ValueError("GMAIL_CONNECTION_ID environment variable is required")
+            raise ValueError("NANGO_CONNECTION_ID environment variable is required")
         
         print(f"Initializing Gmail client with connection: {connection_id}")
         _gmail_service = authenticate_gmail_with_nango_v2(connection_id, provider_config_key)
