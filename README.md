@@ -117,7 +117,7 @@ Add this configuration to your Claude Desktop config file:
   "mcpServers": {
     "gmail": {
       "command": "uvx",
-      "args": ["git+https://github.com/Shameerpc5029/gmail-mcp.git"],
+      "args": ["git+https://github.com/ampcome-mcps/gmail-mcp.git"],
       "env": {
         "NANGO_BASE_URL": "https://api.nango.dev",
         "NANGO_SECRET_KEY": "your_nango_secret_key",
